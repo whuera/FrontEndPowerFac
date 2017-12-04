@@ -1,0 +1,57 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<app-header></app-header>
+<div class="container">
+  <div class="row">
+
+    <div class="clo-sm-10 col-sm-offset-2">
+      <br>
+      <button type="submit" class="btn btn-success" (click)="getContactsController()">
+
+        consultar
+      </button>
+    </div>
+  </div>
+</div>
+<br>
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <thead class="thead-inverse">
+    <tr>
+      <th>id</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>email</th>
+      <th>phone</th>
+      <th>observation</th>
+      <th>opcion</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let contact of contacts">
+      <td>{{ contact.id }}</td>
+      <td>{{ contact.names }}</td>
+      <td>{{ contact.lastNames }}</td>
+      <td>{{ contact.mailtosend }}</td>
+      <td>{{ contact.celphone }}</td>
+      <td>{{ contact.observation }}</td>
+      <td><button type="button" class="btn btn-success" (click)="addContact()">Editar</button> </td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+  <!--
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="col-sm-4">
+        <div class="alert alert-success alert-dismissable">
+          <a href="" class="close">
+            &times;
+          </a>
+          mensaje de prueba
+        </div>
+      </div>
+    </div>
+  </div>
+  -->
+
